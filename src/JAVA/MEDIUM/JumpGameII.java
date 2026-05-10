@@ -2,5 +2,19 @@ package JAVA.MEDIUM;
 
 public class JumpGameII {
     //https://leetcode.com/problems/jump-game-ii
-
+    class Solution {
+        public int jump(int[] nums) {
+            int nJ=0;
+            int farthest=0;
+            int cur=0;
+            for(int i=0;i<nums.length-1;i++){
+                farthest=Math.max(farthest,i+nums[i]);
+                if(i==cur){
+                    nJ++;
+                    cur=farthest;
+                }
+            }
+            return nJ;
+        }
+    }
 }
