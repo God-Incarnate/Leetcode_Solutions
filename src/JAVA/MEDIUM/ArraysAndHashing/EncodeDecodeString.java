@@ -16,7 +16,30 @@ public class EncodeDecodeString {
 
             return sb.toString();
         }
+        //s=5#Hello5#World
+        public List<String> decode(String s) {
+            List<String> result = new ArrayList<>();
+            int i = 0;
 
+            while (i < s.length()) {
+                int j = i;
+
+                // find '#'
+                while (s.charAt(j) != '#') {
+                    j++;
+                }
+
+                int length = Integer.parseInt(s.substring(i, j));
+                j++; // skip '#'
+
+                String word = s.substring(j, j + length);
+                result.add(word);
+
+                i = j + length;
+            }
+
+            return result;
+        }
     }
 
 }
