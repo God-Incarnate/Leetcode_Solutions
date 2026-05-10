@@ -51,7 +51,16 @@ public class DesignTwitter {
             return result;
         }
 
+        public void follow(int followerId, int followeeId) {
+            follows.putIfAbsent(followerId, new HashSet<>());
+            follows.get(followerId).add(followeeId);
+        }
 
+        public void unfollow(int followerId, int followeeId) {
+            if (follows.containsKey(followerId)) {
+                follows.get(followerId).remove(Integer.valueOf(followeeId));
+            }
+        }
     }
 
 /**
