@@ -22,6 +22,22 @@ public class KokosBanana {
             return answer;
         }
 
+        private boolean canFinish(int[] piles, int h, int speed) {
+            long totalHours = 0;
 
+            for (int pile : piles) {
+                totalHours += (pile + speed - 1) / speed;
+            }
+
+            return totalHours <= h;
+        }
+
+        private int getMax(int[] piles) {
+            int max = 0;
+            for (int pile : piles) {
+                max = Math.max(max, pile);
+            }
+            return max;
+        }
     }
 }
