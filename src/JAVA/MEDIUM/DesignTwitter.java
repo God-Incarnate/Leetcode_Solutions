@@ -17,6 +17,40 @@ public class DesignTwitter {
         }
         Map<Integer, Set<Integer>> follows;
         Map<Integer, List<Tweet>> posts;
+        public Twitter() {
+            this.follows=new HashMap<>();
+            this.posts=new HashMap<>();
+        }
+
+        public void postTweet(int userId, int tweetId) {
+            posts.putIfAbsent(userId,new LinkedList<>());
+            posts.get(userId).add(new Tweet(tweetId,time++));
+        }
+
+        public List<Integer> getNewsFeed(int userId) {
+            List<Integer> result=new ArrayList<>();
+            PriorityQueue<Tweet> maxheap=new PriorityQueue<>((a,b)->b.time-a.time);
+            follows.putIfAbsent(userId,new HashSet<>());
+            follows.get(userId).add(userId);
+
+            for(int fo:follows.get(userId)){
+                List<Tweet> tweets=posts.get(fo);
+                if(tweets!=null){
+                    for(Tweet tw:tweets){
+                        maxheap.offer(tw);
+                    }
+                }
+            }
+
+            int count=0;
+            while(!maxheap.isEmpty() && count<10){
+                result.add(maxheap.poll().id);
+                count++;
+            }
+
+            return result;
+        }
+
 
     }
 
