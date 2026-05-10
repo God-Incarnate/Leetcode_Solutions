@@ -14,5 +14,63 @@ public class AddTwoNumbers {
      *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
      * }
      */
+    class Solution {
+        public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+            ListNode result=new ListNode(0);
+            ListNode current=result;
+            int carry=0;
+            while (l1!=null && l2!=null){
+                int value=0;
+                if (carry!=0){
+                    value=l1.val+l2.val+carry;
+                    current.next=new ListNode(value%10);
+                    current=current.next;
+                    if(value>=10) carry=(value/10);
+                    else carry=0;
+                } else {
+                    value=l1.val+l2.val;
+                    current.next=new ListNode(value%10);
+                    current=current.next;
+                    if(value>=10) carry=(value/10);
+                    else carry=0;
+                }
+                l1=l1.next;
+                l2=l2.next;
+            }
+            while(l1!=null){
+                int value=0;
+                if(carry!=0){
+                    value=l1.val+carry;
+                    current.next=new ListNode(value%10);
 
+                    if(value>=10) carry=(value/10);
+                    else carry=0;
+                } else {
+                    current.next=new ListNode(l1.val);
+
+                }
+                current=current.next;
+                l1=l1.next;
+            }
+            while(l2!=null){
+                int value=0;
+                if(carry!=0){
+                    value=l2.val+carry;
+                    current.next=new ListNode(value%10);
+
+                    if(value>=10) carry=(value/10);
+                    else carry=0;
+                } else {
+                    current.next=new ListNode(l2.val);
+
+                }
+                current=current.next;
+                l2=l2.next;
+            }
+            if(carry!=0) current.next=new ListNode(carry);
+            return result.next;
+        }
+
+
+    }
 }
