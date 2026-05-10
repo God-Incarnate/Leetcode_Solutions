@@ -13,6 +13,18 @@ public class CombinationSumII {
             backtrack(0,target,new ArrayList<>(),candidates,result);
             return result;
         }
-
+        private void backtrack(int index,int target,List<Integer> cur, int[] nums,List<List<Integer>> result){
+            if(target==0){
+                result.add(new ArrayList<>(cur));
+                return;
+            }
+            for(int i=index;i<nums.length;i++){
+                if(i>index && nums[i]==nums[i-1]) continue;
+                if(nums[i]>target) break;
+                cur.add(nums[i]);
+                backtrack(i+1,target-nums[i],cur,nums,result);
+                cur.remove(cur.size()-1);
+            }
+        }
     }
 }
