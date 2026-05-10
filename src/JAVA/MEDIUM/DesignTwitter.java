@@ -4,7 +4,21 @@ import java.util.*;
 
 public class DesignTwitter {
     //https://leetcode.com/problems/design-twitter
+    class Twitter {
+        private int time=0;
+        class Tweet{
+            int id;
+            int time;
 
+            public Tweet(int id,int time){
+                this.id=id;
+                this.time=time;
+            }
+        }
+        Map<Integer, Set<Integer>> follows;
+        Map<Integer, List<Tweet>> posts;
+
+    }
 
 /**
  * Your Twitter object will be instantiated and called as such:
