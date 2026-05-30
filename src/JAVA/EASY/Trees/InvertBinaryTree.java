@@ -18,20 +18,15 @@ public class InvertBinaryTree {
 
     class Solution {
         public TreeNode invertTree(TreeNode root) {
-            if (root==null || (root.left==null && root.right==null)) return root;
-            if(root.left==null){
-                root.left=root.right;
-                root.right=null;
-            } else if( root.right==null){
-                root.right=root.left;
-                root.left=null;
-            } else{
-                TreeNode temp=root.left;
-                root.left=root.right;
-                root.right=temp;
-            }
+            if (root == null) return null;
+
+            TreeNode temp = root.left;
+            root.left = root.right;
+            root.right = temp;
+
             invertTree(root.left);
             invertTree(root.right);
+
             return root;
         }
     }
