@@ -1,4 +1,4 @@
-package JAVA.MEDIUM.LinkedList;
+package JAVA.MEDIUM.ArraysAndHashing;
 
 public class FindTheDuplicateNumber {
     //https://leetcode.com/problems/find-the-duplicate-number
