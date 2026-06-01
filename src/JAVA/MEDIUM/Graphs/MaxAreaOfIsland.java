@@ -1,4 +1,4 @@
-package JAVA.MEDIUM;
+package JAVA.MEDIUM.Graphs;
 
 public class MaxAreaOfIsland {
     //https://leetcode.com/problems/max-area-of-island
