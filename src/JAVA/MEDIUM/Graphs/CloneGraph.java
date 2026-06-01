@@ -1,4 +1,4 @@
-package JAVA.MEDIUM;
+package JAVA.MEDIUM.Graphs;
 
 import java.util.ArrayList;
 import java.util.HashMap;
