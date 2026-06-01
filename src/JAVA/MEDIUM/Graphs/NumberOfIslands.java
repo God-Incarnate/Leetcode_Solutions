@@ -1,4 +1,4 @@
-package JAVA.MEDIUM;
+package JAVA.MEDIUM.Graphs;
 
 public class NumberOfIslands {
     //https://leetcode.com/problems/number-of-islands
