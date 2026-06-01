@@ -1,4 +1,4 @@
-package JAVA.MEDIUM;
+package JAVA.MEDIUM.OneDDP;
 
 public class HouseRobber {
     //https://leetcode.com/problems/house-robber

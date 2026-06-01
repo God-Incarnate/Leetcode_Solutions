@@ -1,4 +1,4 @@
-package JAVA.MEDIUM;
+package JAVA.MEDIUM.Heaps;
 
 import java.util.Arrays;
 

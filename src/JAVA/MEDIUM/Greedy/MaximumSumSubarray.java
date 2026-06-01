@@ -1,4 +1,4 @@
-package JAVA.MEDIUM;
+package JAVA.MEDIUM.Greedy;
 
 public class MaximumSumSubarray {
     //https://leetcode.com/problems/maximum-subarray

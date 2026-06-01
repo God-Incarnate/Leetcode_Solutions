@@ -1,4 +1,4 @@
-package JAVA.MEDIUM;
+package JAVA.MEDIUM.Backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;

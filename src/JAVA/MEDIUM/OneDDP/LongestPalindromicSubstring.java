@@ -1,4 +1,4 @@
-package JAVA.MEDIUM;
+package JAVA.MEDIUM.OneDDP;
 
 public class LongestPalindromicSubstring {
     //https://leetcode.com/problems/longest-palindromic-substring

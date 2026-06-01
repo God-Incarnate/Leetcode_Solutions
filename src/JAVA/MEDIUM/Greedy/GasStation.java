@@ -1,4 +1,4 @@
-package JAVA.MEDIUM;
+package JAVA.MEDIUM.Greedy;
 
 public class GasStation {
     //https://leetcode.com/problems/gas-station

@@ -1,4 +1,4 @@
-package JAVA.MEDIUM;
+package JAVA.MEDIUM.OneDDP;
 
 public class PalindromicSubstrings {
     //https://leetcode.com/problems/palindromic-substrings

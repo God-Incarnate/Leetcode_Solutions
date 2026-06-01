@@ -1,4 +1,4 @@
-package JAVA.MEDIUM;
+package JAVA.MEDIUM.Greedy;
 
 public class JumpGame {
     //https://leetcode.com/problems/jump-game
